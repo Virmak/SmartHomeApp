@@ -1,0 +1,21 @@
+<div data-role="fieldcontain"> <label for="name">Mot de passe :</label><a href="#myPopup" data-rel="popup" class="ui-btn">Changer le mot de passe</a></div>
+<div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+  <div>
+    <h3>Modifier votre mot de passe</h3>
+    <label for="pswd" class="ui-hidden-accessible">Ancien mot de passe :</label>
+    <input type="password" name="passw" id="opswd" placeholder="Ancien mot de passe">
+    <label for="pswd" class="ui-hidden-accessible">Nouveau mot de passe :</label>
+    <input type="password" name="passw" id="pswd" placeholder="Nouveau mot de passe">
+    <input type="submit" data-inline="true" value="Confirmer" onclick="changePassword($('#opswd').val(), $('#pswd').val());">
+  </div>
+</div>
+<div data-role="fieldcontain">
+  <label for="name">Système Alarme :</label>
+  <button id="lockBtn" class="ui-btn">Loading ...</button>
+</div>
+
+<div data-role="fieldcontain">
+  <label for="name">Addresse ip du serveur :</label>
+  <input id="serverIp" type="text" placeholder="Adresse IP du serveur"></input> 
+</div>
+<button id="serverIpBtn" class="ui-btn">Confirmer</button>

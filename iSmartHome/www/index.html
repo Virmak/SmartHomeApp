@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Page Title</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<title>SMART HOME</title>
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/socket.io-1.4.5.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<script type="text/javascript" src="js/MainScript.js"></script>
+</head>
+<body> 
+<div data-role="page" id="setting">
+		<div data-role="header" data-theme="b">
+			<h1>SmartHome</h1>
+		</div>
+		
+		<div data-role="footer" data-id="foo1" data-position="fixed" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a id="hm" href="#home" data-icon="home">Home</a></li> <!--Status of the house-->
+					<li><a href="#setting" data-icon="grid">Commande</a></li>
+					<li><a href="#" data-icon="lock">Sécurité</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div data-role="page" id="home" data-theme="b">
+		<div data-role="header">
+			<h1>SmartHome</h1>
+		</div>
+		<div id="pageContent" data-role="content">
+			Loading ...
+
+		</div>
+
+		<div data-role="footer" data-id="foo1" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a id="hm" data-icon="home" onclick="gotoPage('status.html');">Home</a></li> <!--Status of the house-->
+					<li><a  data-icon="grid" onclick="gotoPage('control.html');">Commande</a></li>
+					<li><a  data-icon="lock" onclick="gotoPage('setting.html');">Paramétre</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+</body>
+</html>
